@@ -20,6 +20,10 @@ def read_root():
 def hello():
     return {"message": "Hello from the backend API!"}
 
+@app.get("/api/sayhelloinspanish")
+def say_hello_in_spanish():
+    return {"message": "¡Hola desde la API!"}
+
 if __name__ == "__main__":
     import uvicorn
     port = int(os.getenv("PORT", 8000))
